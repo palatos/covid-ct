@@ -6,7 +6,8 @@ This script evaluates the performance of a trained model on the training, valida
 """
 from sklearn.metrics import confusion_matrix
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import os, argparse
 import cv2
 from sklearn.metrics import roc_auc_score

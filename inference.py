@@ -8,7 +8,8 @@ To run this, please include the imagepath input parameter.  For example:
 python inference.py --imagepath /home/username/newdata/image1.png
 """
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import os, argparse
 import cv2
 
